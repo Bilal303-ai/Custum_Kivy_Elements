@@ -2,9 +2,11 @@
 This repo contains the custum kivy elements. 
 
 ## 1. Rounded Button
-  RoundedButton class implements a rounded corner button. I have added two properties:
-    (1) bg_color: This let you give a color to the button
-    (2) rad: This lets you adjust the border radius.
+  RoundedButton class implements a rounded corner button. I have added two new properties:
+  
+**(1) bg_color:** This lets you give a color to the button.
+
+**(2) rad:** This lets you adjust the border radius.
 
 
 https://github.com/user-attachments/assets/362eae79-c4f3-4f99-b1c8-bcf10f9f60c6
