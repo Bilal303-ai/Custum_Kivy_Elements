@@ -1,3 +1,7 @@
+from kivy.uix.button import Button
+from kivy.graphics import RoundedRectangle, Color
+from kivy.properties import ListProperty
+
 class RoundedButton(Button):
     bg_color = ListProperty([1, 0, 0, 1])
     """Contains the color of the button
