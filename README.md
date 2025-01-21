@@ -12,7 +12,7 @@ https://github.com/user-attachments/assets/362eae79-c4f3-4f99-b1c8-bcf10f9f60c6
   
 ## Code for above example:
 ```
-from RoundedButton import RoundedButton
+from rounded_button import RoundedButton
 from kivy.app import App
 from kivy.uix.floatlayout import FloatLayout
 from kivy.lang import Builder
