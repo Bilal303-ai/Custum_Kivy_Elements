@@ -12,7 +12,11 @@ This repo contains the custum kivy elements.
 https://github.com/user-attachments/assets/362eae79-c4f3-4f99-b1c8-bcf10f9f60c6
 
   
-## Code for above example:
+## Code for the app shown in above example:
+
+**Step 1:** Download the file named rounded_button.py.
+
+**Step 2:** Create a new file and copy the following snippet into it and run it.
 ```
 from rounded_button import RoundedButton
 from kivy.app import App
