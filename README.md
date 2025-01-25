@@ -1,7 +1,55 @@
 # Custum_Kivy_Elements
 This repo contains the custum kivy elements. 
 
-## 1. Circular Icon Button
+## 1. Compound Toggle Button
+
+https://github.com/user-attachments/assets/5fe029fe-56ce-403f-b7fa-ebe98fe4410c
+
+## Code for the app shown in above video:
+**Step 1:** Download the file named compound_button.py.
+
+**Step 2:** Create a new file and copy the following snippet into it and run it.
+
+```
+from kivy.app import App
+from kivy.uix.floatlayout import FloatLayout
+from compound_button import CompoundButton
+from kivy.graphics import Rectangle, Color
+
+class RootWidget(FloatLayout):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        with self.canvas.before:
+            Color(255/255, 248/255, 248/255, 1)
+            self.rect = Rectangle(pos=self.pos, size=self.size)
+    
+        self.bind(pos=self._update_rect, size=self._update_rect)
+        
+    def _update_rect(self, *args):
+        self.rect.pos = self.pos
+        self.rect.size = self.size
+        
+class MainApp(App):
+    def build(self):
+        root = RootWidget()
+        root.add_widget(CompoundButton(
+            icon_sources=["cam1.png", "mic1.png", "key1.png"],
+            pos_hint={"center_x": 0.5, "center_y": 0.5},
+            bg_color=[255 / 255, 217 / 255, 227 / 255, 1],
+            border_color=[210 / 255, 157 / 255, 172 / 255, 1],
+            total_width=400,
+            total_height=100,
+            border_width=2,
+            rad=30
+        ))
+        
+        return root
+
+if __name__ == "__main__":
+    MainApp().run()
+```
+
+## 2. Circular Icon Button
 CircularIconButton class implements a circular buttons for icons. The button supports toggle behaviour. I have added four new properties:
 
 **(1) bg_color_normal:** Color of the button when it is in OFF state.
@@ -47,7 +95,7 @@ class MainApp(App):
 if __name__ == "__main__":
     MainApp().run()
 
-## 2. Rounded Button
+## 3. Rounded Button
   RoundedButton class implements a rounded corner button. I have added two new properties:
   
 **(1) bg_color:** This lets you give a color to the button.
